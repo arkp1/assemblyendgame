@@ -141,7 +141,7 @@ export default function AssemblyEndgame() {
       <main>
         <header>
           <h1>Assembly: Endgame</h1>
-          <p>Guess the word in under 8 attempts.</p>
+          <p>Guess the word in under 8 attempts. Or use Assembly language to start all over again! </p>
         </header>
 
         <section className={gameStatusClass}>{gameStatusMessage()}</section>
