@@ -13,7 +13,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
 }
 header > h1 {
   display: flex;
@@ -32,6 +32,21 @@ header > p {
   font-weight: 400;
   color: #8e8e8e;
 }
+section.game-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 600px;
+  min-width: 200px;
+  height: 80px;
+  min-height: fit-content;
+  background-color: #353535;
+  margin-top: 1rem;
+}
 section.game-status.won {
   display: flex;
   align-items: center;
@@ -43,7 +58,7 @@ section.game-status.won {
   max-width: 600px;
   min-width: 200px;
   height: max-content;
-  min-height: fit-content;
+  min-height: 80px;
   background-color: #2e933c;
   margin-top: 1rem;
 }
@@ -58,7 +73,7 @@ section.game-status.lost {
   max-width: 600px;
   min-width: 200px;
   height: max-content;
-  min-height: fit-content;
+  min-height: 80px;
   background-color: #D02B2B;
   margin-top: 1rem;
 }
@@ -73,7 +88,7 @@ section.game-status.incorrect {
   max-width: 600px;
   min-width: 200px;
   height: 80px;
-  min-height: fit-content;
+  min-height: 80px;
   background-color: #9966CC;
   margin-top: 1rem;
 }
@@ -96,11 +111,12 @@ section.language-cards {
   margin-bottom: 1.5rem;
 }
 .card {
+  position: relative;
   border-radius: 3px;
   padding: 4px;
   margin: 2px;
 }
-/* span.card.lost::before {
+span.card.lost::before {
   content: "💀";
   position: absolute;
   display: flex;
@@ -108,11 +124,12 @@ section.language-cards {
   justify-content: center;
   height: 100%;
   width: 100%;
+  border-radius: 3px;
   font-size: 0.85rem;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-} */
+}
 section.word {
   display: flex;
   align-items: center;
@@ -156,6 +173,10 @@ section.keyboard > button.correct {
 }
 section.keyboard > button.wrong {
   background-color: #EC5D49;
+}
+section.keyboard > button:disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 button.new-game {
     width: 10rem;
